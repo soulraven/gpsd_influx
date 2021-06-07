@@ -63,7 +63,7 @@ class GpsdPusher(object):
         data = {
             "measurement": settings.INFLUXDB_MEASURMENT,
             "tags": {
-                "host": hostname
+                "host": hostname.lower()
             },
             "fields": {
                 'mode': gpsd.mode,
